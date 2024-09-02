@@ -216,6 +216,7 @@ model member {
   serviceBooking    serviceBooking[]
   Cart              Cart[]
   support           support[]
+  is_sales_person   Boolean            @default(false)
 }
 
 model memberInfo {
@@ -369,6 +370,7 @@ model Product {
 enum ProductCategory {
   clothing
 }
+
 model Pictures {
   id          String           @id @default(auto()) @map("_id") @db.ObjectId
   productKey  String?
@@ -444,6 +446,12 @@ enum referalStatus {
   rejected
 }
 
+enum BookingStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
 model serviceBooking {
   id              String          @id @default(auto()) @map("_id") @db.ObjectId
   service_id      String
@@ -454,11 +462,13 @@ model serviceBooking {
   seller          businessProfile @relation(fields: [sellerId], references: [id])
   appointmentDate DateTime        @default(now())
   buyerContact    String
+  status          BookingStatus   @default(PENDING)
 }
 
 enum ServiceCategory {
   clothing
 }
+
 model Services {
   id               String             @id @default(auto()) @map("_id") @db.ObjectId
   bussiness_id     String
