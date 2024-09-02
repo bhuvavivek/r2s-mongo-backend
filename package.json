@@ -4,16 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.ts",
+   "start": "nodemon index.ts",
     "server": "nodemon index.ts",
-    "clean": "sudo rm -rf dist",
+    "clean": "rmdir /s /q dist",
     "clean:win": "if exist dist rmdir /s /q dist",
-    "db": "npm run clean && cat prisma/models/*.prisma > prisma/schema.prisma && npx prisma format && npx prisma db push",
+    "db": "npm run clean && find prisma/models -name '*.prisma' -exec cat {} + > prisma/schema.prisma && npx prisma format && npx prisma db push",
     "db:window": "npm run clean:win && type prisma\\models\\*.prisma > prisma\\schema.prisma && npx prisma format && npx prisma db push",
     "build": "npm run db && tsc -b",
     "build:window": "npm run db:window && npx tsc -b",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "node ./dist/index.js"
+    "serve": "node ./dist/index.js",
+    "postinstall": "npx prisma generate"
   },
   "keywords": [],
   "author": "",
