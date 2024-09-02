@@ -1,0 +1,17 @@
+model bussinessAddress {
+  id             String      @id @default(auto()) @map("_id") @db.ObjectId
+  address_line_1 String
+  address_line_2 String
+  city           String
+  state          String
+  area           String
+  country        String
+  pincode        String
+  type           AddressType
+  Created_at     DateTime    @default(now())
+  Updated_at     DateTime    @updatedAt
+
+  // Add the reference to the Business_Profile
+  business_profile   businessProfile? @relation(fields: [business_ProfileId], references: [id], onDelete: Cascade)
+  business_ProfileId String?
+}

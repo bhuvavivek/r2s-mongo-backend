@@ -1,0 +1,12 @@
+model socialLink {
+  id               String          @id @default(auto()) @map("_id") @db.ObjectId
+  business_id      String          @unique
+  instagram        String?
+  facebook         String?
+  linkedin         String?
+  twitter          String?
+  youtube          String?
+  Created_at       DateTime        @default(now())
+  Updated_at       DateTime        @updatedAt
+  Business_Profile businessProfile @relation(fields: [business_id], references: [id], onDelete: Cascade)
+}

@@ -1,0 +1,18 @@
+model memberAddress {
+  id                          String      @id @default(auto()) @map("_id") @db.ObjectId
+  address_line_1              String
+  address_line_2              String?
+  city                        String
+  state                       String
+  country                     String      @default("india")
+  pincode                     String
+  type                        AddressType
+  is_delete                   Boolean     @default(false)
+  Created_at                  DateTime    @default(now())
+  Updated_at                  DateTime    @updatedAt
+  // orderHistories OrderHistory[]  @relation("OrderAddress")
+  business_profile            member?     @relation(fields: [member_id], references: [id], onDelete: Cascade)
+  member_id                   String?
+  order_reciver_name          String?     @default("null")
+  order_reciver_mobile_number String?
+}

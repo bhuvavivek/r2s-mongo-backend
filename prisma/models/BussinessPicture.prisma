@@ -1,0 +1,15 @@
+model interiorExteriorImages {
+  id               String          @id @default(auto()) @map("_id") @db.ObjectId
+  business_id      String
+  image_url        String
+  image_key        String
+  type             PictureType
+  Created_at       DateTime        @default(now())
+  Updated_at       DateTime        @updatedAt
+  Business_Profile businessProfile @relation(fields: [business_id], references: [id], onDelete: Cascade)
+}
+
+enum PictureType {
+  Interior
+  Exterior
+}

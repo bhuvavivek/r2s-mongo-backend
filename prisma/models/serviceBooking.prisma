@@ -1,0 +1,11 @@
+model serviceBooking {
+    id              String          @id @default(auto()) @map("_id") @db.ObjectId
+    service_id      String
+    service         Services        @relation(fields: [service_id], references: [id])
+    buyerId         String
+    buyer           member          @relation(fields: [buyerId], references: [id])
+    sellerId        String
+    seller          businessProfile @relation(fields: [sellerId], references: [id])
+    appointmentDate DateTime        @default(now())
+    buyerContact    String
+}

@@ -1,0 +1,11 @@
+model Services {
+  id           String          @id @default(auto()) @map("_id") @db.ObjectId
+  bussiness_id String
+  price        Float
+  title        String
+  description  String
+  pictures     Pictures[] // Corrected the type name to match the actual model name
+  created_at   DateTime        @default(now())
+  updated_at   DateTime        @updatedAt
+  Bussiness    businessProfile @relation(fields: [bussiness_id], references: [id], onDelete: Cascade)
+}

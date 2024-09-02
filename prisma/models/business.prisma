@@ -1,0 +1,29 @@
+model businessProfile {
+  id                              String                   @id @default(auto()) @map("_id") @db.ObjectId
+  member_id                       String
+  bussiness_name                  String
+  Bussiness_type                  String
+  otherType                       String?
+  business_logo                   String?
+  logo_image_key                  String?
+  business_cover_image            String?
+  cover_image_key                 String?
+  description                     String?
+  short_description               String?
+  website_link                    String?
+  business_hour                   String?
+  rating                          Int                      @default(0)
+  Created_at                      DateTime                 @default(now())
+  Updated_at                      DateTime                 @updatedAt
+  Member                          member                   @relation(fields: [member_id], references: [id], onDelete: Cascade)
+  addresses                       bussinessAddress[]
+  Pictures                        Pictures[]
+  Social_Link                     socialLink?
+  Interior_Exterior_Picture_Links interiorExteriorImages[]
+  BusinessFeedback                businessFeedback[]
+  OrderHistory                    OrderHistory[]
+  Product                         Product[]
+  promotionRequest                promotionRequest[]
+  Services                        Services[]
+  shippingFee                     Float?
+}

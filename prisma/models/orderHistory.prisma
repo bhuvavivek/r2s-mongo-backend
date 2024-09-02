@@ -1,0 +1,37 @@
+enum OrderStatus {
+  PENDING
+  PROCESSING
+  APPROVED
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  RETURNED
+  REFUNDED
+  ON_HOLD
+}
+
+model OrderHistory {
+  id            String          @id @default(auto()) @map("_id") @db.ObjectId
+  buyer         member          @relation(fields: [buyerId], references: [id])
+  buyerId       String
+  seller        businessProfile @relation(fields: [sellerId], references: [id])
+  sellerId      String
+  products      Order[]
+  orderStatus   OrderStatus
+  address       memberAddress   @relation(fields: [addressId], references: [id])
+  addressId     String
+  orderDate     DateTime        @default(now())
+  transaction   Transaction?
+  orderId       String?
+  amount        Float?
+  paymentId     String?
+  paymentStatus String?
+  secretKey     String?
+  deliveryOtp   Int?
+  shippingFee   Float?
+}
+
+// enum OrderPaymentStatus {
+//   PENDING
+//   SUCCESS
+// }

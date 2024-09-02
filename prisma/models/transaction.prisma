@@ -1,0 +1,16 @@
+model Transaction {
+  id             String        @id @default(auto()) @map("_id") @db.ObjectId
+  orderHistory   OrderHistory  @relation(fields: [orderHistoryId], references: [id])
+  orderHistoryId String        @unique
+  amount         Float?
+  paymentStatus  PaymentStatus // Payment status for the transaction
+  paymentMethod  PaymentMethod // Payment status for the transaction
+  transactionID  String // Payment status for the transaction
+  Created_at     DateTime      @default(now())
+  Updated_at     DateTime      @updatedAt
+}
+
+enum PaymentMethod {
+  CASH_ON_DELIVERY
+  ONLINE
+}

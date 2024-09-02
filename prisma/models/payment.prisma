@@ -1,0 +1,18 @@
+model paymentHistory {
+  id            String        @id @default(auto()) @map("_id") @db.ObjectId
+  member_id     String
+  amount        Float
+  transction_id String
+  status        PaymentStatus @default(pending)
+  created_at    DateTime      @default(now())
+  updated_at    DateTime      @updatedAt
+  Member        member        @relation(fields: [member_id], references: [id], onDelete: Cascade)
+  orderId       String?       @default("null")
+}
+
+enum PaymentStatus {
+  pending
+  approved
+  rejected
+  refunded
+}

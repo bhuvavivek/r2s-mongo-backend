@@ -1,0 +1,37 @@
+name: Deploy r2s Backend App
+
+on:
+  push:
+    branches: [production] 
+
+  pull_request:
+    branches: [production]   
+ 
+jobs: 
+  deploy:
+    runs-on: self-hosted  
+ 
+    steps:
+      - name: Checkout code  
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }} 
+        uses: actions/setup-node@v3
+        with:
+            node-version: ${{ matrix.node-version }}
+
+    
+      - name: Delete Existing Node Modules
+        run: sudo rm -rf node_modules/
+        
+      - name: yarn install
+        run: yarn install
+
+      - name: Building the package
+        run: npm run build
+      
+
+      - name: start the server
+        run: sudo pm2 start dist/app.js --name tbcoi-back
+
+

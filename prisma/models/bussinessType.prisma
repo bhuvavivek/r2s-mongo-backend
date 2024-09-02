@@ -1,0 +1,6 @@
+model bussinessType {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  type       String   @unique
+  Created_at DateTime @default(now())
+  Updated_at DateTime @updatedAt
+}

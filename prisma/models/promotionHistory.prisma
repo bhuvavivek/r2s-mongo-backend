@@ -1,0 +1,40 @@
+model promotionRequest {
+  id               String          @id @default(auto()) @map("_id") @db.ObjectId
+  business_id      String
+  poster           String
+  poster_key       String
+  amount           Float
+  status           PayoutStatus    @default(pending)
+  approved_by      String?
+  approved_at      DateTime?
+  created_at       DateTime        @default(now())
+  updated_at       DateTime        @updatedAt
+  is_deleted       Boolean         @default(false)
+  Business_Profile businessProfile @relation(fields: [business_id], references: [id], onDelete: Cascade)
+}
+
+model promotion {
+  id               String           @id @default(auto()) @map("_id") @db.ObjectId
+  promotion_id     String           @unique
+  from             DateTime
+  to               DateTime
+  is_active        Boolean          @default(true)
+  is_deleted       Boolean          @default(false)
+  promotionRequest promotionRequest @relation(fields: [promotion_id], references: [id])
+}
+
+model promotionAndMembershipAmount {
+  id               String @id @default(auto()) @map("_id") @db.ObjectId
+  promotionAmount  Float
+  membershipAmount Float
+  referallAmount   Float
+}
+
+model DefaultPromotion {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  poster     String
+  poster_key String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  is_deleted Boolean  @default(false)
+}

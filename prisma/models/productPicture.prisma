@@ -1,0 +1,13 @@
+model Pictures {
+  id          String           @id @default(auto()) @map("_id") @db.ObjectId
+  productKey  String?
+  serviceKey  String?
+  businessKey String?
+  image_url   String
+  image_key   String
+  Created_at  DateTime         @default(now())
+  Updated_at  DateTime         @updatedAt
+  Product     Product?         @relation(fields: [productKey], references: [id], onDelete: Cascade)
+  Services    Services?        @relation(fields: [serviceKey], references: [id], onDelete: Cascade)
+  Business    businessProfile? @relation(fields: [businessKey], references: [id], onDelete: Cascade)
+}

@@ -1,0 +1,12 @@
+model additionalDetail {
+  id                       String   @id @default(auto()) @map("_id") @db.ObjectId // Use a UUID field
+  search_limit             Int
+  contact_no               String
+  contact_email            String
+  Master_referall_amount   Int
+  Child_referall_amount    Int
+  SubChild_referall_amount Int
+  discount                 Int
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
+}

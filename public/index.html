@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+
+<body>
+    <h1>Checkout Page</h1>
+    <p>This is a checkout page.</p>
+    <button id="checkoutButton">Checkout</button>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        const checkoutButton = document.getElementById('checkoutButton');
+        checkoutButton.addEventListener('click', async () => {
+            try {
+                // const response = await fetch('/api/member/ecommerce/order/create', {
+                //     method: 'POST',
+                //     headers: {
+                //         'Content-Type': 'application/json'
+                //     },
+                //     body: JSON.stringify({
+                //         "products": [
+                //             {
+                //                 "productId": "a2a1b24f-dd4f-4450-b002-4c387f41b061",
+                //                 "quantity": 2
+                //             },
+                //             {
+                //                 "productId": "995ccec1-ea62-4db9-8ec7-47cf94f759c1",
+                //                 "quantity": 1
+                //             }
+                //         ],
+                //         "addressId": "995ccec1-ea62-4db9-8ec7-47cf94f759c1",
+                //         "transactionID": "dadadas"
+                //     })
+                // });
+                // const data = await response.json();
+                // console.log(data);
+                // if (data.success) {
+                    // console.log('first')
+                    // // Redirect to Razorpay payment page with the order ID
+                    // const orderId = data.order.id;
+                    // const razorpayPaymentUrl = `https://checkout.razorpay.com/v1/payment-page/${orderId}`;
+                    // window.location.href = razorpayPaymentUrl;
+                    // console.log('first')
+
+                    var options = {
+                        key: 'rzp_test_lZkcO3ue9calBg',
+                        amount: 1000,
+                        currency: 'INR',
+                        name: 'Acme Corp',
+                        description: 'Test Transaction',
+                        image: 'https://example.com/your_logo',
+                        order_id: 'order_NuRLUHDsE5xMe4',
+                        callback_url: `http://localhost:8080/api/member/ecommerce/order/verifyPayment?secretKey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmRlciI6eyJpZCI6Im9yZGVyX051UkxVSERzRTV4TWU0IiwiZW50aXR5Ijoib3JkZXIiLCJhbW91bnQiOjEyNTAwMCwiYW1vdW50X3BhaWQiOjAsImFtb3VudF9kdWUiOjEyNTAwMCwiY3VycmVuY3kiOiJJTlIiLCJyZWNlaXB0IjoidHJhbnNhY3Rpb25faWRfMTIzIiwib2ZmZXJfaWQiOm51bGwsInN0YXR1cyI6ImNyZWF0ZWQiLCJhdHRlbXB0cyI6MCwibm90ZXMiOltdLCJjcmVhdGVkX2F0IjoxNzEyMjEwNzQwfSwib3JkZXJEYXRhIjp7ImJ1eWVySWQiOiI3NmM1ZmQyOC04YjM1LTQ3OTAtYjc5NS1jYTU0MTEzYzI3NGYiLCJhZGRyZXNzSWQiOiIwNjg1OTk3Zi00Zjg5LTRkNjQtYWY4MC1iNGEyNmVkMGM3NWIiLCJvcmRlclN0YXR1cyI6IlBFTkRJTkciLCJhbW91bnQiOjEyNTAsImRlbGl2ZXJ5T3RwIjoyMDkwODEsInBheW1lbnRTdGF0dXMiOiJQRU5ESU5HIiwib3JkZXJJZCI6IiIsInByb2R1Y3RzIjpbeyJwcm9kdWN0SWQiOiIzYjk2NDU2NC0zZTdjLTRjZDQtYmU0MS03ZThmYTFjMjRjNmIiLCJxdWFudGl0eSI6MSwiYW1vdW50IjoxMDAwfSx7InByb2R1Y3RJZCI6IjI4YmIzZmY1LWUyZTgtNDBkMS04NTlkLTRjZmQ0ZWFiYjZiNiIsInF1YW50aXR5IjoxLCJhbW91bnQiOjUwfSx7InByb2R1Y3RJZCI6IjI0MzRkY2M1LTQ0MjgtNDE1YS1hYjMwLTMwZWZlOWYzZTk2MSIsInF1YW50aXR5IjoxLCJhbW91bnQiOjUwfV0sInRyYW5zYWN0aW9uIjp7ImFtb3VudCI6MTI1MCwidHJhbnNhY3Rpb25JRCI6InRyYW5zYWN0aW9uX2lkXzEyMyIsInBheW1lbnRTdGF0dXMiOiJQRU5ESU5HIiwicGF5bWVudE1ldGhvZCI6Ik9OTElORSJ9fSwid2FsbGV0QmFsYW5jZSI6IjAiLCJpYXQiOjE3MTIyMTA3Mzl9.y1JfW5APBI2u2pkDAiNm5aYj7_OZ67qdigEg8QsZmCc`,
+                        prefill: {
+                            name: 'Gaurav Kumar',
+                            email: 'gaurav.kumar@example.com',
+                            contact: '9000090000',
+                        },
+                        notes: {
+                            address: 'Razorpay Corporate Office',
+                        },
+                        theme: {
+                            color: '#3399cc',
+                        },
+                    };
+                    const razor = new window.Razorpay(options);
+                    razor.open();
+                // } else {
+                //     // Handle error response from backend
+                //     console.error('Error:', data.error);
+                //     console.log('first')
+                // }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+
+</html>

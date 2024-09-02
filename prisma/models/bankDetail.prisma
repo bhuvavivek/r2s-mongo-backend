@@ -1,0 +1,10 @@
+model bankDetail {
+  id           String  @id @default(auto()) @map("_id") @db.ObjectId
+  Account_name String?
+  Account_no   String?
+  Ifsc_code    String?
+  bank_name    String?
+  upi_id       String?
+  member_id    String
+  Member       member  @relation(fields: [member_id], references: [id], onDelete: Cascade)
+}

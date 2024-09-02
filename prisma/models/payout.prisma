@@ -1,0 +1,18 @@
+model payoutHistory {
+  id            String       @id @default(auto()) @map("_id") @db.ObjectId
+  member_id     String
+  amount        Float
+  transction_id String?
+  status        PayoutStatus
+  created_at    DateTime     @default(now())
+  updated_at    DateTime     @updatedAt
+  paid_at       DateTime?
+  Member        member       @relation(fields: [member_id], references: [id], onDelete: Cascade)
+}
+
+enum PayoutStatus {
+  pending
+  approved
+  rejected
+  expired
+}

@@ -1,0 +1,52 @@
+model member {
+  id                String             @id @default(auto()) @map("_id") @db.ObjectId
+  password          String
+  email_id          String             @unique
+  search_count      Int                @default(0)
+  full_name         String
+  Contact_no        String             @unique
+  Job_title         JobDetail
+  referal_id        String             @unique
+  profile_picture   String?
+  profile_image_key String?
+  isWhatsapp        Boolean            @default(false)
+  is_premium        Boolean            @default(false)
+  memberid          String             @unique
+  Status            Status             @default(pending)
+  Valid_upto        DateTime?
+  joined_at         DateTime?
+  Created_at        DateTime           @default(now())
+  Updated_at        DateTime           @updatedAt
+  MemberInfo        memberInfo?
+  Bank_Detail       bankDetail[]
+  Payment_History   paymentHistory[]
+  Business_Profile  businessProfile[]
+  Payout_History    payoutHistory[]
+  referredBy        referralTable[]
+  BusinessFeedback  businessFeedback[]
+  addresses         memberAddress[]
+}
+
+model memberInfo {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  member_id         String   @unique
+  balance           Float
+  revenue           Float
+  withdrawl         Float
+  ecommerceWithdraw Float?
+  Created_at        DateTime @default(now())
+  Updated_at        DateTime @updatedAt
+  Member            member   @relation(fields: [member_id], references: [id], onDelete: Cascade)
+}
+
+enum JobDetail {
+  Owner
+  Manager
+  Salesman
+}
+
+enum Status {
+  pending
+  active
+  blocked
+}

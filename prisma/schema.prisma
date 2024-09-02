@@ -1,0 +1,547 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum AddressType {
+  permanent
+  office_address
+  home_delivery
+  office_delivery
+}
+
+model additionalDetail {
+  id                       String   @id @default(auto()) @map("_id") @db.ObjectId // Use a UUID field
+  search_limit             Int
+  contact_no               String
+  contact_email            String
+  Master_referall_amount   Int
+  Child_referall_amount    Int
+  SubChild_referall_amount Int
+  discount                 Int
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
+}
+
+model admin {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  email             String   @unique
+  name              String
+  profile_photo     String
+  profile_image_key String
+  type              UserType
+  password          String // Pas  sword field to store hashed passwords
+  phone             String // Phone number, which is optional
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+enum UserType {
+  ADMIN
+  MANAGER
+}
+
+model ask {
+  id          String     @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  status      askStatus  @default(PENDING)
+  isDeleted   Boolean    @default(false)
+  responses   response[] // Relationship to store multiple responses associated with the ask
+  created_at  DateTime   @default(now())
+  updated_at  DateTime   @updatedAt
+  createdBy   member?    @relation(fields: [createdById], references: [id])
+  createdById String? // Field to store the ID of the member who created the ask
+}
+
+enum askStatus {
+  PENDING
+  SOLVED
+  CANCEL
+}
+
+model response {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  description   String
+  respondedBy   member   @relation(fields: [respondedById], references: [id])
+  respondedById String
+  ask           ask      @relation(fields: [askId], references: [id])
+  askId         String
+  createdAt     DateTime @default(now())
+}
+
+model bankDetail {
+  id           String  @id @default(auto()) @map("_id") @db.ObjectId
+  Account_name String?
+  Account_no   String?
+  Ifsc_code    String?
+  bank_name    String?
+  upi_id       String?
+  member_id    String
+  Member       member  @relation(fields: [member_id], references: [id], onDelete: Cascade)
+}
+
+model businessProfile {
+  id                              String                   @id @default(auto()) @map("_id") @db.ObjectId
+  member_id                       String
+  bussiness_name                  String
+  Bussiness_type                  String
+  otherType                       String?
+  business_logo                   String?
+  logo_image_key                  String?
+  business_cover_image            String?
+  cover_image_key                 String?
+  description                     String?
+  short_description               String?
+  website_link                    String?
+  business_hour                   String?
+  rating                          Int                      @default(0)
+  Created_at                      DateTime                 @default(now())
+  Updated_at                      DateTime                 @updatedAt
+  Member                          member                   @relation(fields: [member_id], references: [id], onDelete: Cascade)
+  addresses                       bussinessAddress[]
+  Pictures                        Pictures[]
+  Social_Link                     socialLink?
+  Interior_Exterior_Picture_Links interiorExteriorImages[]
+  BusinessFeedback                businessFeedback[]
+  OrderHistory                    OrderHistory[]
+  Product                         Product[]
+  promotionRequest                promotionRequest[]
+  Services                        Services[]
+  shippingFee                     Float?
+  serviceBooking                  serviceBooking[]
+}
+
+model bussinessAddress {
+  id             String      @id @default(auto()) @map("_id") @db.ObjectId
+  address_line_1 String
+  address_line_2 String
+  city           String
+  state          String
+  area           String
+  country        String
+  pincode        String
+  type           AddressType
+  Created_at     DateTime    @default(now())
+  Updated_at     DateTime    @updatedAt
+
+  // Add the reference to the Business_Profile
+  business_profile   businessProfile? @relation(fields: [business_ProfileId], references: [id], onDelete: Cascade)
+  business_ProfileId String?
+}
+
+model businessFeedback {
+  id           String           @id @default(auto()) @map("_id") @db.ObjectId
+  bussiness_id String?
+  Bussiness    businessProfile? @relation(fields: [bussiness_id], references: [id], onDelete: Cascade)
+  member_id    String
+  product_id   String?
+  product      Product?         @relation(fields: [product_id], references: [id], onDelete: Cascade)
+  service_id   String?
+  Services     Services?        @relation(fields: [service_id], references: [id], onDelete: Cascade)
+  Member       member           @relation(fields: [member_id], references: [id], onDelete: Cascade)
+  rating       Int              @default(0)
+  comment      String?
+  type         feedbackType
+  created_at   DateTime         @default(now())
+  updated_at   DateTime         @updatedAt
+}
+
+enum feedbackType {
+  bussiness
+  product
+  service
+}
+
+model interiorExteriorImages {
+  id               String          @id @default(auto()) @map("_id") @db.ObjectId
+  business_id      String
+  image_url        String
+  image_key        String
+  type             PictureType
+  Created_at       DateTime        @default(now())
+  Updated_at       DateTime        @updatedAt
+  Business_Profile businessProfile @relation(fields: [business_id], references: [id], onDelete: Cascade)
+}
+
+enum PictureType {
+  Interior
+  Exterior
+}
+
+model bussinessType {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  type       String   @unique
+  Created_at DateTime @default(now())
+  Updated_at DateTime @updatedAt
+}
+
+model member {
+  id                String             @id @default(auto()) @map("_id") @db.ObjectId
+  password          String
+  email_id          String             @unique
+  search_count      Int                @default(0)
+  full_name         String
+  Contact_no        String             @unique
+  Job_title         JobDetail
+  referal_id        String             @unique
+  profile_picture   String?
+  profile_image_key String?
+  isWhatsapp        Boolean            @default(false)
+  is_premium        Boolean            @default(false)
+  memberid          String             @unique
+  Status            Status             @default(pending)
+  Valid_upto        DateTime?
+  joined_at         DateTime?
+  Created_at        DateTime           @default(now())
+  Updated_at        DateTime           @updatedAt
+  MemberInfo        memberInfo?
+  Bank_Detail       bankDetail[]
+  Payment_History   paymentHistory[]
+  Business_Profile  businessProfile[]
+  Payout_History    payoutHistory[]
+  referredBy        referralTable[]
+  BusinessFeedback  businessFeedback[]
+  addresses         memberAddress[]
+  ask               ask[]
+  response          response[]
+  OrderHistory      OrderHistory[]
+  serviceBooking    serviceBooking[]
+  Cart              Cart[]
+  support           support[]
+  is_sales_person   Boolean            @default(false)
+}
+
+model memberInfo {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  member_id         String   @unique
+  balance           Float
+  revenue           Float
+  withdrawl         Float
+  ecommerceWithdraw Float?
+  Created_at        DateTime @default(now())
+  Updated_at        DateTime @updatedAt
+  Member            member   @relation(fields: [member_id], references: [id], onDelete: Cascade)
+}
+
+enum JobDetail {
+  Owner
+  Manager
+  Salesman
+}
+
+enum Status {
+  pending
+  active
+  blocked
+}
+
+model memberAddress {
+  id                          String         @id @default(auto()) @map("_id") @db.ObjectId
+  address_line_1              String
+  address_line_2              String?
+  city                        String
+  state                       String
+  country                     String         @default("india")
+  pincode                     String
+  type                        AddressType
+  is_delete                   Boolean        @default(false)
+  Created_at                  DateTime       @default(now())
+  Updated_at                  DateTime       @updatedAt
+  // orderHistories OrderHistory[]  @relation("OrderAddress")
+  business_profile            member?        @relation(fields: [member_id], references: [id], onDelete: Cascade)
+  member_id                   String?
+  order_reciver_name          String?        @default("null")
+  order_reciver_mobile_number String?
+  OrderHistory                OrderHistory[]
+}
+
+model Order {
+  id             String       @id @default(auto()) @map("_id") @db.ObjectId
+  orderHistory   OrderHistory @relation(fields: [orderHistoryId], references: [id])
+  orderHistoryId String
+  amount         Float
+  quantity       Int
+  product        Product      @relation(fields: [productId], references: [id])
+  productId      String
+}
+
+enum OrderStatus {
+  PENDING
+  PROCESSING
+  APPROVED
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  RETURNED
+  REFUNDED
+  ON_HOLD
+}
+
+model OrderHistory {
+  id            String          @id @default(auto()) @map("_id") @db.ObjectId
+  buyer         member          @relation(fields: [buyerId], references: [id])
+  buyerId       String
+  seller        businessProfile @relation(fields: [sellerId], references: [id])
+  sellerId      String
+  products      Order[]
+  orderStatus   OrderStatus
+  address       memberAddress   @relation(fields: [addressId], references: [id])
+  addressId     String
+  orderDate     DateTime        @default(now())
+  transaction   Transaction?
+  orderId       String?
+  amount        Float?
+  paymentId     String?
+  paymentStatus String?
+  secretKey     String?
+  deliveryOtp   Int?
+  shippingFee   Float?
+}
+
+// enum OrderPaymentStatus {
+//   PENDING
+//   SUCCESS
+// }
+model paymentHistory {
+  id            String        @id @default(auto()) @map("_id") @db.ObjectId
+  member_id     String
+  amount        Float
+  transction_id String
+  status        PaymentStatus @default(pending)
+  created_at    DateTime      @default(now())
+  updated_at    DateTime      @updatedAt
+  Member        member        @relation(fields: [member_id], references: [id], onDelete: Cascade)
+  orderId       String?       @default("null")
+}
+
+enum PaymentStatus {
+  pending
+  approved
+  rejected
+  refunded
+}
+
+model payoutHistory {
+  id            String       @id @default(auto()) @map("_id") @db.ObjectId
+  member_id     String
+  amount        Float
+  transction_id String?
+  status        PayoutStatus
+  created_at    DateTime     @default(now())
+  updated_at    DateTime     @updatedAt
+  paid_at       DateTime?
+  Member        member       @relation(fields: [member_id], references: [id], onDelete: Cascade)
+}
+
+enum PayoutStatus {
+  pending
+  approved
+  rejected
+  expired
+}
+
+model Product {
+  id                 String             @id @default(auto()) @map("_id") @db.ObjectId
+  bussiness_id       String
+  price              Float
+  title              String
+  originalPrice      Float?
+  discount           Float?
+  discountPercentage Float?
+  description        String
+  pictures           Pictures[] // Corrected the type name to match the actual model name
+  created_at         DateTime           @default(now())
+  updated_at         DateTime           @updatedAt
+  Bussiness          businessProfile    @relation(fields: [bussiness_id], references: [id], onDelete: Cascade)
+  is_delete          Boolean            @default(false)
+  businessFeedback   businessFeedback[]
+  Order              Order[]
+  Cart               Cart[]
+}
+
+enum ProductCategory {
+  clothing
+}
+
+model Pictures {
+  id          String           @id @default(auto()) @map("_id") @db.ObjectId
+  productKey  String?
+  serviceKey  String?
+  businessKey String?
+  image_url   String
+  image_key   String
+  Created_at  DateTime         @default(now())
+  Updated_at  DateTime         @updatedAt
+  Product     Product?         @relation(fields: [productKey], references: [id], onDelete: Cascade)
+  Services    Services?        @relation(fields: [serviceKey], references: [id], onDelete: Cascade)
+  Business    businessProfile? @relation(fields: [businessKey], references: [id], onDelete: Cascade)
+}
+
+model promotionRequest {
+  id               String          @id @default(auto()) @map("_id") @db.ObjectId
+  business_id      String
+  poster           String
+  poster_key       String
+  amount           Float
+  status           PayoutStatus    @default(pending)
+  approved_by      String?
+  approved_at      DateTime?
+  created_at       DateTime        @default(now())
+  updated_at       DateTime        @updatedAt
+  is_deleted       Boolean         @default(false)
+  Business_Profile businessProfile @relation(fields: [business_id], references: [id], onDelete: Cascade)
+  promotion        promotion?
+}
+
+model promotion {
+  id               String           @id @default(auto()) @map("_id") @db.ObjectId
+  promotion_id     String           @unique
+  from             DateTime
+  to               DateTime
+  is_active        Boolean          @default(true)
+  is_deleted       Boolean          @default(false)
+  promotionRequest promotionRequest @relation(fields: [promotion_id], references: [id])
+}
+
+model promotionAndMembershipAmount {
+  id               String @id @default(auto()) @map("_id") @db.ObjectId
+  promotionAmount  Float
+  membershipAmount Float
+  referallAmount   Float
+}
+
+model DefaultPromotion {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  poster     String
+  poster_key String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  is_deleted Boolean  @default(false)
+}
+
+model referralTable {
+  id          String        @id @default(auto()) @map("_id") @db.ObjectId
+  referred_by String
+  referred_to String // Storing the ID of the referred member
+  level       Int
+  amount      Float
+  status      referalStatus
+  message     String?
+  created_at  DateTime      @default(now())
+  updated_at  DateTime      @updatedAt
+  Member      member?       @relation(fields: [referred_to], references: [id], onDelete: Cascade)
+}
+
+enum referalStatus {
+  pending
+  approved
+  rejected
+}
+
+enum BookingStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model serviceBooking {
+  id              String          @id @default(auto()) @map("_id") @db.ObjectId
+  service_id      String
+  service         Services        @relation(fields: [service_id], references: [id])
+  buyerId         String
+  buyer           member          @relation(fields: [buyerId], references: [id])
+  sellerId        String
+  seller          businessProfile @relation(fields: [sellerId], references: [id])
+  appointmentDate DateTime        @default(now())
+  buyerContact    String
+  status          BookingStatus   @default(PENDING)
+}
+
+enum ServiceCategory {
+  clothing
+}
+
+model Services {
+  id               String             @id @default(auto()) @map("_id") @db.ObjectId
+  bussiness_id     String
+  price            Float
+  title            String
+  description      String
+  pictures         Pictures[] // Corrected the type name to match the actual model name
+  created_at       DateTime           @default(now())
+  updated_at       DateTime           @updatedAt
+  Bussiness        businessProfile    @relation(fields: [bussiness_id], references: [id], onDelete: Cascade)
+  businessFeedback businessFeedback[]
+  serviceBooking   serviceBooking[]
+}
+
+model Cart {
+  id         String  @id @default(auto()) @map("_id") @db.ObjectId
+  member_id  String
+  product_id String
+  quantity   Int
+  Member     member  @relation(fields: [member_id], references: [id], onDelete: Cascade)
+  Product    Product @relation(fields: [product_id], references: [id], onDelete: Cascade)
+}
+
+model socialLink {
+  id               String          @id @default(auto()) @map("_id") @db.ObjectId
+  business_id      String          @unique
+  instagram        String?
+  facebook         String?
+  linkedin         String?
+  twitter          String?
+  youtube          String?
+  Created_at       DateTime        @default(now())
+  Updated_at       DateTime        @updatedAt
+  Business_Profile businessProfile @relation(fields: [business_id], references: [id], onDelete: Cascade)
+}
+
+model supportTitle {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  title      String
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+}
+
+model support {
+  id            String        @id @default(auto()) @map("_id") @db.ObjectId
+  member_id     String
+  member        member        @relation(fields: [member_id], references: [id], onDelete: Cascade)
+  title         String
+  description   String
+  ticketNumber  Int           @unique
+  supportStatus supportStatus
+  created_at    DateTime      @default(now())
+  updated_at    DateTime      @default(now())
+}
+
+enum supportStatus {
+  PENDING
+  SOLVED
+}
+
+model Transaction {
+  id             String        @id @default(auto()) @map("_id") @db.ObjectId
+  orderHistory   OrderHistory  @relation(fields: [orderHistoryId], references: [id])
+  orderHistoryId String        @unique
+  amount         Float?
+  paymentStatus  PaymentStatus // Payment status for the transaction
+  paymentMethod  PaymentMethod // Payment status for the transaction
+  transactionID  String // Payment status for the transaction
+  Created_at     DateTime      @default(now())
+  Updated_at     DateTime      @updatedAt
+}
+
+enum PaymentMethod {
+  CASH_ON_DELIVERY
+  ONLINE
+}

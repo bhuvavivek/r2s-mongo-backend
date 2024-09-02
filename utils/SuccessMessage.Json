@@ -1,0 +1,27 @@
+{
+    "PASSWORD_WORNG": "Password is incorrect",
+    "LOGIN_SUCCESS": "Logged in successfully",
+    "UNAUTHORIZED": "Authorization Failed",
+    "UPLOAD_SUCCESS": "Cases uploaded successfully",
+    "UPLOAD_FAILED": "Case upload failed",
+    "ACCESS_DENIED": "Unauthorized access",
+    "NOT_ACTIVE": "User not active",
+    "RESET_LINK_SENT": "Reset link sent successfully on mail id",
+    "INVALID_RESET_TOKEN": "Invalid reset token, Try again",
+    "MULTIPLE_OWNER_LIMIT": "Only One Owner Allowed",
+    "SINGLE_OWNER_LIMIT": "Must Be One Owner",
+    "INVALID_HOLDING_TYPE": "Invalid Holding Type ",
+    "INVALID_MERCHANT_ID": "Please Give a valid merchant id to Proceed",
+    "NON_UNIQUE_MOBILES": "For All Invitation Mobile no Should Be unique ",
+    "CO_OWNER_MAX_LIMIT": "A Co-Owner cannot have a total share of 100%",
+    "CO_OWNER_MIN_LIMIT": "A Co-Owner Should have More than 25%",
+    "SHARE_SUM_LIMIT": "Sum of shares should be 100%",
+    "OWNER_LESS_THAN_CO_OWNER_MAX": "Owner Share Can Not Be Less than Co-Owner",
+    "MULTIPLE_OWNERS_NOT_ALLOWED": "Multiple Owner Are not Allowed",
+    "SINGLE_OWNER_REQUIRED": "There Must Be Only One Owner",
+    "COUNTRY_CODE" : "Country code is missing",
+    "INVALID_MOBILE": "Please enter a valid mobile number with no spaces",
+    "INVALID_EMAIL": "Please enter a valid email address to continue" ,
+    "INVALID_INVITATION": "For Invitation Share Type and merchant Id is required" 
+}
+

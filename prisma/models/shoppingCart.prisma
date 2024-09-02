@@ -1,0 +1,8 @@
+model Cart {
+    id         String  @id @default(auto()) @map("_id") @db.ObjectId
+    member_id  String
+    product_id String
+    quantity   Int
+    Member     member  @relation(fields: [member_id], references: [id], onDelete: Cascade)
+    Product    Product @relation(fields: [product_id], references: [id], onDelete: Cascade)
+}

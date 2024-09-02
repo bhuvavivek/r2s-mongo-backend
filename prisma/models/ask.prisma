@@ -1,0 +1,28 @@
+model ask {
+    id          String     @id @default(auto()) @map("_id") @db.ObjectId
+    title       String
+    description String
+    status      askStatus  @default(PENDING)
+    isDeleted   Boolean    @default(false)
+    responses   response[] // Relationship to store multiple responses associated with the ask
+    created_at  DateTime   @default(now())
+    updated_at  DateTime   @updatedAt
+    createdBy   member?    @relation(fields: [createdById], references: [id])
+    createdById String? // Field to store the ID of the member who created the ask
+}
+
+enum askStatus {
+    PENDING
+    SOLVED
+    CANCEL
+}
+
+model response {
+    id            String   @id @default(auto()) @map("_id") @db.ObjectId
+    description   String
+    respondedBy   member   @relation(fields: [respondedById], references: [id])
+    respondedById String
+    ask           ask      @relation(fields: [askId], references: [id])
+    askId         String
+    createdAt     DateTime @default(now())
+}

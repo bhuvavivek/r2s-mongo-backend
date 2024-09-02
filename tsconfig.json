@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./",
+    "target": "es2016",
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+  },
+  "include": [
+    "./**/*.ts",
+    "test.ts",
+    "./**/*.json",
+    "./utils/*",
+    "./validations/validationMessage.json",
+    "./utils/SuccessMessage.Json"
+]
+}

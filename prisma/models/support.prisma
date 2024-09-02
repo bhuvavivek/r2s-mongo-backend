@@ -1,0 +1,23 @@
+model supportTitle {
+    id         String   @id @default(auto()) @map("_id") @db.ObjectId
+    title      String
+    created_at DateTime @default(now())
+    updated_at DateTime @default(now())
+}
+
+model support {
+    id            String        @id @default(auto()) @map("_id") @db.ObjectId
+    member_id     String
+    member        member        @relation(fields: [member_id], references: [id], onDelete: Cascade)
+    title         String
+    description   String
+    ticketNumber  Int           @unique
+    supportStatus supportStatus
+    created_at    DateTime      @default(now())
+    updated_at    DateTime      @default(now())
+}
+
+enum supportStatus {
+    PENDING
+    SOLVED
+}

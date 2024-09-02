@@ -1,0 +1,22 @@
+model businessFeedback {
+  id           String           @id @default(auto()) @map("_id") @db.ObjectId
+  bussiness_id String?
+  Bussiness    businessProfile? @relation(fields: [bussiness_id], references: [id], onDelete: Cascade)
+  member_id    String
+  product_id   String?
+  product      Product?         @relation(fields: [product_id], references: [id], onDelete: Cascade)
+  service_id   String?
+  Services     Services?        @relation(fields: [service_id], references: [id], onDelete: Cascade)
+  Member       member           @relation(fields: [member_id], references: [id], onDelete: Cascade)
+  rating       Int              @default(0)
+  comment      String?
+  type         feedbackType
+  created_at   DateTime         @default(now())
+  updated_at   DateTime         @updatedAt
+}
+
+enum feedbackType {
+  bussiness
+  product
+  service
+}

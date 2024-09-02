@@ -1,0 +1,18 @@
+model referralTable {
+  id          String        @id @default(auto()) @map("_id") @db.ObjectId
+  referred_by String
+  referred_to String // Storing the ID of the referred member
+  level       Int
+  amount      Float
+  status      referalStatus
+  message     String?
+  created_at  DateTime      @default(now())
+  updated_at  DateTime      @updatedAt
+  Member      member?       @relation(fields: [referred_to], references: [id], onDelete: Cascade)
+}
+
+enum referalStatus {
+  pending
+  approved
+  rejected
+}
