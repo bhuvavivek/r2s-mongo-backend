@@ -1,0 +1,668 @@
+[
+	{
+		"id" : "00348ec6-e043-4de9-bb43-5df2bb5bbd73",
+		"type" : "Jewellery Stores",
+		"Created_at" : "2024-08-10 11:27:35.452",
+		"Updated_at" : "2024-08-10 11:27:35.452"
+	},
+	{
+		"id" : "01fb9d51-da9b-40c1-8a99-1ef9f33db5f1",
+		"type" : "Loan Services",
+		"Created_at" : "2024-08-10 11:27:31.391",
+		"Updated_at" : "2024-08-10 11:27:31.391"
+	},
+	{
+		"id" : "048fc365-8295-4910-b640-d4ff76579591",
+		"type" : "Inspectors",
+		"Created_at" : "2024-08-10 11:27:34.528",
+		"Updated_at" : "2024-08-10 11:27:34.528"
+	},
+	{
+		"id" : "07f10861-4d6d-416a-80fc-d4d85311c355",
+		"type" : "Vegetable & Fruit",
+		"Created_at" : "2024-08-10 11:27:31.543",
+		"Updated_at" : "2024-08-10 11:27:31.543"
+	},
+	{
+		"id" : "0cd23967-e6fd-4585-bbb8-8f69f414770e",
+		"type" : "Hotels & Motels",
+		"Created_at" : "2024-08-10 11:27:37.134",
+		"Updated_at" : "2024-08-10 11:27:37.134"
+	},
+	{
+		"id" : "0d42c73b-d106-433c-a662-a888d6fb6763",
+		"type" : "Financial Services",
+		"Created_at" : "2024-08-10 11:27:31.161",
+		"Updated_at" : "2024-08-10 11:27:31.161"
+	},
+	{
+		"id" : "0de7a703-c0f0-44de-8df7-51ead66510ba",
+		"type" : "Transportation Services",
+		"Created_at" : "2024-08-10 11:27:37.211",
+		"Updated_at" : "2024-08-10 11:27:37.211"
+	},
+	{
+		"id" : "0ee5b9fa-7955-4e2b-aa75-8e7f77e5ad44",
+		"type" : "Electricians",
+		"Created_at" : "2024-08-10 11:27:34.225",
+		"Updated_at" : "2024-08-10 11:27:34.225"
+	},
+	{
+		"id" : "10adba4e-e7e0-4dad-8618-1700c4a98505",
+		"type" : "Animal Care & Supplies",
+		"Created_at" : "2024-08-10 11:27:38.196",
+		"Updated_at" : "2024-08-10 11:27:38.196"
+	},
+	{
+		"id" : "120cc66a-ff6d-4a2f-b60c-9620f707efac",
+		"type" : "Event Planners",
+		"Created_at" : "2024-08-10 11:27:38.500",
+		"Updated_at" : "2024-08-10 11:27:38.500"
+	},
+	{
+		"id" : "13837a47-102d-4e9b-a79b-500548769668",
+		"type" : "Dietitians & Nutritionists",
+		"Created_at" : "2024-08-10 11:27:36.214",
+		"Updated_at" : "2024-08-10 11:27:36.214"
+	},
+	{
+		"id" : "151ac28b-6d21-4888-9f7e-2825bb9342e0",
+		"type" : "Security Services",
+		"Created_at" : "2024-08-10 11:27:38.803",
+		"Updated_at" : "2024-08-10 11:27:38.803"
+	},
+	{
+		"id" : "15bfdfdd-6306-48c2-829d-6446cc32a929",
+		"type" : "Pool Supplies & Services",
+		"Created_at" : "2024-08-10 11:27:37.817",
+		"Updated_at" : "2024-08-10 11:27:37.817"
+	},
+	{
+		"id" : "16b63615-9d79-4158-98e7-7be4fb989d47",
+		"type" : "Roofers",
+		"Created_at" : "2024-08-10 11:27:34.686",
+		"Updated_at" : "2024-08-10 11:27:34.686"
+	},
+	{
+		"id" : "1736ee48-b438-4a72-b5a9-4a477132ca7e",
+		"type" : "Nail Salons",
+		"Created_at" : "2024-08-10 11:27:32.703",
+		"Updated_at" : "2024-08-10 11:27:32.703"
+	},
+	{
+		"id" : "173ef80f-4893-4a95-b354-6ad1d6a221cc",
+		"type" : "Mental Health Services",
+		"Created_at" : "2024-08-10 11:27:36.447",
+		"Updated_at" : "2024-08-10 11:27:36.447"
+	},
+	{
+		"id" : "1b7f10ad-f041-4491-bdd1-9b7a7e2ac323",
+		"type" : "Furniture Stores",
+		"Created_at" : "2024-08-10 11:27:37.362",
+		"Updated_at" : "2024-08-10 11:27:37.362"
+	},
+	{
+		"id" : "1eb79682-06bf-4faf-979c-db5cdcd8d942",
+		"type" : "Acupuncture",
+		"Created_at" : "2024-08-10 11:27:35.756",
+		"Updated_at" : "2024-08-10 11:27:35.756"
+	},
+	{
+		"id" : "20bccc09-70d3-4afa-a490-9e6387b9c3cd",
+		"type" : "Clinics & Medical Centers",
+		"Created_at" : "2024-08-10 11:27:36.062",
+		"Updated_at" : "2024-08-10 11:27:36.062"
+	},
+	{
+		"id" : "21ab7b70-73f8-4760-be41-0234ab52fa24",
+		"type" : "Home Goods",
+		"Created_at" : "2024-08-10 11:27:37.590",
+		"Updated_at" : "2024-08-10 11:27:37.590"
+	},
+	{
+		"id" : "2231d81f-84c1-4378-9fbe-cc728bb82072",
+		"type" : "Home Improvement & Repair",
+		"Created_at" : "2024-08-10 11:27:34.377",
+		"Updated_at" : "2024-08-10 11:27:34.377"
+	},
+	{
+		"id" : "2474ac52-6936-47ab-aafd-ea220088b6fe",
+		"type" : "Cards & Gift Shops",
+		"Created_at" : "2024-08-10 11:27:35.299",
+		"Updated_at" : "2024-08-10 11:27:35.299"
+	},
+	{
+		"id" : "266ccb0d-ab30-4a7f-8b54-81c0eaf4f757",
+		"type" : "Investment Services",
+		"Created_at" : "2024-08-10 11:27:31.314",
+		"Updated_at" : "2024-08-10 11:27:31.314"
+	},
+	{
+		"id" : "2d2402e0-85e0-45e3-bb67-42ac67182120",
+		"type" : "Educational Resources",
+		"Created_at" : "2024-08-10 11:27:33.087",
+		"Updated_at" : "2024-08-10 11:27:33.087"
+	},
+	{
+		"id" : "304fd651-16dd-4757-ad5f-fa556b87b127",
+		"type" : "Human Resources",
+		"Created_at" : "2024-08-10 11:27:33.542",
+		"Updated_at" : "2024-08-10 11:27:33.542"
+	},
+	{
+		"id" : "31e038e4-6c44-4503-b0b1-4d8b091bf1e2",
+		"type" : "Barber & Beauty Salons",
+		"Created_at" : "2024-08-10 11:27:32.248",
+		"Updated_at" : "2024-08-10 11:27:32.248"
+	},
+	{
+		"id" : "338196a0-2010-4d17-9def-7210e69de8c4",
+		"type" : "Auto Services",
+		"Created_at" : "2024-08-10 11:27:32.021",
+		"Updated_at" : "2024-08-10 11:27:32.021"
+	},
+	{
+		"id" : "3d06b76d-658a-4b52-a1c1-dcb0b7f144ff",
+		"type" : "Security Systems & Services",
+		"Created_at" : "2024-08-10 11:27:33.846",
+		"Updated_at" : "2024-08-10 11:27:33.846"
+	},
+	{
+		"id" : "408db2b1-23fa-4d6b-a321-6d4c2e1c2f00",
+		"type" : "Photography & Video Studios",
+		"Created_at" : "2024-08-10 11:27:38.120",
+		"Updated_at" : "2024-08-10 11:27:38.120"
+	},
+	{
+		"id" : "428a4d11-4b7f-45e5-aa55-91c4dd49ea83",
+		"type" : "Graphic Design, Printing & Publishing",
+		"Created_at" : "2024-08-10 11:27:33.466",
+		"Updated_at" : "2024-08-10 11:27:33.466"
+	},
+	{
+		"id" : "45cdc96b-4422-45e4-a844-8c0b80172af3",
+		"type" : "Assisted Living & Home Health Care",
+		"Created_at" : "2024-08-10 11:27:35.832",
+		"Updated_at" : "2024-08-10 11:27:35.832"
+	},
+	{
+		"id" : "4aa1b164-5b02-40e8-8c43-24bf2c2080d1",
+		"type" : "Dosa & Cafes",
+		"Created_at" : "2024-08-10 11:27:34.841",
+		"Updated_at" : "2024-08-10 11:27:34.841"
+	},
+	{
+		"id" : "4b2cffea-309e-4622-93f6-5aca8bd8c156",
+		"type" : "Department Stores",
+		"Created_at" : "2024-08-10 11:27:39.182",
+		"Updated_at" : "2024-08-10 11:27:39.182"
+	},
+	{
+		"id" : "4bb1ba20-db7d-4531-b18b-a11b75732602",
+		"type" : "Dental Services",
+		"Created_at" : "2024-08-10 11:27:36.139",
+		"Updated_at" : "2024-08-10 11:27:36.139"
+	},
+	{
+		"id" : "4d3ea9d0-3335-40ef-91ed-0378fb760f4f",
+		"type" : "Home Decor & Interior Design",
+		"Created_at" : "2024-08-10 11:27:37.438",
+		"Updated_at" : "2024-08-10 11:27:37.438"
+	},
+	{
+		"id" : "50337da3-2e02-4ab9-a65d-cc740efac565",
+		"type" : "Grocery Stores",
+		"Created_at" : "2024-08-10 11:27:35.072",
+		"Updated_at" : "2024-08-10 11:27:35.072"
+	},
+	{
+		"id" : "52eb06f5-aff4-4d64-adaf-ee83bc37f289",
+		"type" : "Funeral Services & Cemeteries",
+		"Created_at" : "2024-08-10 11:27:38.576",
+		"Updated_at" : "2024-08-10 11:27:38.576"
+	},
+	{
+		"id" : "53612b15-bd88-4efb-bdf9-8c59100ae3f7",
+		"type" : "Office Supplies",
+		"Created_at" : "2024-08-10 11:27:33.694",
+		"Updated_at" : "2024-08-10 11:27:33.694"
+	},
+	{
+		"id" : "547682ec-6f75-455a-813c-c8db995a8d91",
+		"type" : "Coaching & Training",
+		"Created_at" : "2024-08-10 11:27:32.931",
+		"Updated_at" : "2024-08-10 11:27:32.931"
+	},
+	{
+		"id" : "5484ca28-92ba-4ca6-80f6-88c272bf18bc",
+		"type" : "Carpenters",
+		"Created_at" : "2024-08-10 11:27:34.074",
+		"Updated_at" : "2024-08-10 11:27:34.074"
+	},
+	{
+		"id" : "5494466a-4fe8-499f-88ac-452988386ffe",
+		"type" : "Music Classes or Singers, Instrument Players",
+		"Created_at" : "2024-08-10 11:27:31.769",
+		"Updated_at" : "2024-08-10 11:27:31.769"
+	},
+	{
+		"id" : "55f36b9a-7dda-4761-9f80-e530fd88912f",
+		"type" : "Massage Therapy",
+		"Created_at" : "2024-08-10 11:27:36.370",
+		"Updated_at" : "2024-08-10 11:27:36.370"
+	},
+	{
+		"id" : "568497c3-4fe9-4516-9918-05b2de6ad1f5",
+		"type" : "Legal Services",
+		"Created_at" : "2024-08-10 11:27:33.618",
+		"Updated_at" : "2024-08-10 11:27:33.618"
+	},
+	{
+		"id" : "5d9e4ef3-05b5-47cc-bdd6-6691b8359d2d",
+		"type" : "Handyman Services",
+		"Created_at" : "2024-08-10 11:27:34.301",
+		"Updated_at" : "2024-08-10 11:27:34.301"
+	},
+	{
+		"id" : "5f971512-2bd9-4edb-b5fe-227b98cdb30a",
+		"type" : "Exercise & Fitness Centers",
+		"Created_at" : "2024-08-10 11:27:32.476",
+		"Updated_at" : "2024-08-10 11:27:32.476"
+	},
+	{
+		"id" : "6134de5a-168e-4161-9a10-1d9dac294cfb",
+		"type" : "Clothing & Accessories Stores",
+		"Created_at" : "2024-08-10 11:27:39.107",
+		"Updated_at" : "2024-08-10 11:27:39.107"
+	},
+	{
+		"id" : "636b7832-0269-44ce-8463-98cb5f473881",
+		"type" : "Chiropractors",
+		"Created_at" : "2024-08-10 11:27:35.986",
+		"Updated_at" : "2024-08-10 11:27:35.986"
+	},
+	{
+		"id" : "682ab9f9-d9e6-439f-9280-0306e3955e13",
+		"type" : "Toy Stores",
+		"Created_at" : "2024-08-10 11:27:35.680",
+		"Updated_at" : "2024-08-10 11:27:35.680"
+	},
+	{
+		"id" : "6b5c7456-6fb2-4ef8-ad5a-630e316e6629",
+		"type" : "Coffee Shops",
+		"Created_at" : "2024-08-10 11:27:34.762",
+		"Updated_at" : "2024-08-10 11:27:34.762"
+	},
+	{
+		"id" : "6f4745f9-57a0-4dd2-9de8-ca075b665a8e",
+		"type" : "Party Supplies",
+		"Created_at" : "2024-08-10 11:27:35.528",
+		"Updated_at" : "2024-08-10 11:27:35.528"
+	},
+	{
+		"id" : "701775d3-05c3-4ae3-aa9a-9b85d071c132",
+		"type" : "Beauty Supplies",
+		"Created_at" : "2024-08-10 11:27:32.324",
+		"Updated_at" : "2024-08-10 11:27:32.324"
+	},
+	{
+		"id" : "70897a17-2fa3-4fac-956d-77f18fb2c9b0",
+		"type" : "Financial Institution",
+		"Created_at" : "2024-08-10 11:27:31.077",
+		"Updated_at" : "2024-08-10 11:27:31.077"
+	},
+	{
+		"id" : "78739fc2-4fac-466f-9636-60a1f5613fd0",
+		"type" : "Schools, Colleges, Teachers",
+		"Created_at" : "2024-08-10 11:27:33.164",
+		"Updated_at" : "2024-08-10 11:27:33.164"
+	},
+	{
+		"id" : "7c67ce60-0fa9-45af-9461-df0e0d0c8924",
+		"type" : "Pandit (Astrologers)",
+		"Created_at" : "2024-08-10 11:27:38.728",
+		"Updated_at" : "2024-08-10 11:27:38.728"
+	},
+	{
+		"id" : "7eae5cd5-598b-4ad6-ba49-487794e52275",
+		"type" : "Bookstores & Libraries",
+		"Created_at" : "2024-08-10 11:27:32.855",
+		"Updated_at" : "2024-08-10 11:27:32.855"
+	},
+	{
+		"id" : "8470cb18-0a41-40fc-b51e-74caa7d733b2",
+		"type" : "Nurses",
+		"Created_at" : "2024-08-10 11:27:36.523",
+		"Updated_at" : "2024-08-10 11:27:36.523"
+	},
+	{
+		"id" : "86bda2a7-fec0-4f27-b576-579c1304fe75",
+		"type" : "Home Furnishings",
+		"Created_at" : "2024-08-10 11:27:37.514",
+		"Updated_at" : "2024-08-10 11:27:37.514"
+	},
+	{
+		"id" : "87173a35-9552-4347-9f64-36a27cddf0a7",
+		"type" : "Dairy (Milk Products)",
+		"Created_at" : "2024-08-10 11:27:31.467",
+		"Updated_at" : "2024-08-10 11:27:31.467"
+	},
+	{
+		"id" : "88afaeed-2c69-42d7-a8b4-93a7bfdf2d13",
+		"type" : "Hair Salons",
+		"Created_at" : "2024-08-10 11:27:32.552",
+		"Updated_at" : "2024-08-10 11:27:32.552"
+	},
+	{
+		"id" : "8e62ddb2-5959-46c6-9b10-4d51cacc02a3",
+		"type" : "Pest Control",
+		"Created_at" : "2024-08-10 11:27:37.741",
+		"Updated_at" : "2024-08-10 11:27:37.741"
+	},
+	{
+		"id" : "90b4e111-a1f6-4fe4-b0ae-d4771600e2dd",
+		"type" : "Distribution & Warehousing",
+		"Created_at" : "2024-08-10 11:27:37.893",
+		"Updated_at" : "2024-08-10 11:27:37.893"
+	},
+	{
+		"id" : "92ea486e-4e99-4079-adc0-84828baa8072",
+		"type" : "Music Instrument Stores",
+		"Created_at" : "2024-08-10 11:27:31.860",
+		"Updated_at" : "2024-08-10 11:27:31.860"
+	},
+	{
+		"id" : "93bc74cd-9cc7-4309-bd9a-d1a48fefe772",
+		"type" : "Laboratories & Diagnostic Services",
+		"Created_at" : "2024-08-10 11:27:36.291",
+		"Updated_at" : "2024-08-10 11:27:36.291"
+	},
+	{
+		"id" : "9ac60bf2-5bb3-470c-aa7a-78d0d72a3b37",
+		"type" : "Construction Companies",
+		"Created_at" : "2024-08-10 11:27:34.149",
+		"Updated_at" : "2024-08-10 11:27:34.149"
+	},
+	{
+		"id" : "9bc18633-e773-42cb-88b7-9d6ee712f704",
+		"type" : "Insurance",
+		"Created_at" : "2024-08-10 11:27:31.240",
+		"Updated_at" : "2024-08-10 11:27:31.240"
+	},
+	{
+		"id" : "9e3afbf7-a4e2-40b2-ab31-a487d1bf2cf6",
+		"type" : "Massage & Bodywork",
+		"Created_at" : "2024-08-10 11:27:32.628",
+		"Updated_at" : "2024-08-10 11:27:32.628"
+	},
+	{
+		"id" : "9ee110ed-8285-4c48-89f7-08167bb9401b",
+		"type" : "Audiologists",
+		"Created_at" : "2024-08-10 11:27:35.909",
+		"Updated_at" : "2024-08-10 11:27:35.909"
+	},
+	{
+		"id" : "a816db51-dc4a-4029-883e-6f08a5eb85b1",
+		"type" : "Podiatrists",
+		"Created_at" : "2024-08-10 11:27:36.906",
+		"Updated_at" : "2024-08-10 11:27:36.906"
+	},
+	{
+		"id" : "a99f5c94-1cc7-4e5d-8f20-0ba7552ba107",
+		"type" : "Plumbers",
+		"Created_at" : "2024-08-10 11:27:34.610",
+		"Updated_at" : "2024-08-10 11:27:34.610"
+	},
+	{
+		"id" : "ab1e58e4-df15-43ee-9407-a0b021db128b",
+		"type" : "Ice Cream Shops",
+		"Created_at" : "2024-08-10 11:27:35.149",
+		"Updated_at" : "2024-08-10 11:27:35.149"
+	},
+	{
+		"id" : "ab62c48c-377e-47fe-9417-c10994899de0",
+		"type" : "Spas",
+		"Created_at" : "2024-08-10 11:27:32.779",
+		"Updated_at" : "2024-08-10 11:27:32.779"
+	},
+	{
+		"id" : "abb13c37-c67e-4cc9-9006-e8ba72efe435",
+		"type" : "Steel & Metal Supplies",
+		"Created_at" : "2024-08-10 11:27:38.045",
+		"Updated_at" : "2024-08-10 11:27:38.045"
+	},
+	{
+		"id" : "aca8a0e5-546e-450e-9c79-d2f19a1b4415",
+		"type" : "Shoe Stores & Repair",
+		"Created_at" : "2024-08-10 11:27:39.410",
+		"Updated_at" : "2024-08-10 11:27:39.410"
+	},
+	{
+		"id" : "af1a8b7c-bc4f-49d7-ac03-929424bb7996",
+		"type" : "Filmmakers, Directors, Writers, Music Producers",
+		"Created_at" : "2024-08-10 11:27:31.694",
+		"Updated_at" : "2024-08-10 11:27:31.694"
+	},
+	{
+		"id" : "b2d65c41-cf41-4b41-9d6a-6c8e18f7abe0",
+		"type" : "Auto Sales",
+		"Created_at" : "2024-08-10 11:27:31.936",
+		"Updated_at" : "2024-08-10 11:27:31.936"
+	},
+	{
+		"id" : "b6aa698a-8e57-471e-9c3c-5bd6df7e2d67",
+		"type" : "Dry Cleaners & Laundromats",
+		"Created_at" : "2024-08-10 11:27:32.400",
+		"Updated_at" : "2024-08-10 11:27:32.400"
+	},
+	{
+		"id" : "b713d2ff-e3bd-4473-98b2-3725fcf54e89",
+		"type" : "Optical Shops",
+		"Created_at" : "2024-08-10 11:27:36.599",
+		"Updated_at" : "2024-08-10 11:27:36.599"
+	},
+	{
+		"id" : "b9101209-a549-4c2d-bc18-341b9551e73c",
+		"type" : "Social Workers",
+		"Created_at" : "2024-08-10 11:27:36.982",
+		"Updated_at" : "2024-08-10 11:27:36.982"
+	},
+	{
+		"id" : "b91348ba-e668-4a79-bead-e9a69878fae3",
+		"type" : "Physical Therapists",
+		"Created_at" : "2024-08-10 11:27:36.750",
+		"Updated_at" : "2024-08-10 11:27:36.750"
+	},
+	{
+		"id" : "bd00decb-9e6e-42f0-8c60-dc9f1b683142",
+		"type" : "Motorcycle Sales & Services",
+		"Created_at" : "2024-08-10 11:27:32.173",
+		"Updated_at" : "2024-08-10 11:27:32.173"
+	},
+	{
+		"id" : "be58da97-12ef-40a1-98c1-3b11d2c8e3be",
+		"type" : "Flowers & Gift Shops",
+		"Created_at" : "2024-08-10 11:27:35.376",
+		"Updated_at" : "2024-08-10 11:27:35.376"
+	},
+	{
+		"id" : "bef8c491-30fe-444c-8867-d0b25c79dbd1",
+		"type" : "Advertising & Marketing Consultants",
+		"Created_at" : "2024-08-10 11:27:33.315",
+		"Updated_at" : "2024-08-10 11:27:33.315"
+	},
+	{
+		"id" : "c0915858-4128-4287-9fb6-3885ab445b3e",
+		"type" : "Crafts & Hobby Stores",
+		"Created_at" : "2024-08-10 11:27:38.348",
+		"Updated_at" : "2024-08-10 11:27:38.348"
+	},
+	{
+		"id" : "c70b25de-fbc6-47e6-bfc3-3091d1392a90",
+		"type" : "Restaurants",
+		"Created_at" : "2024-08-10 11:27:35.223",
+		"Updated_at" : "2024-08-10 11:27:35.223"
+	},
+	{
+		"id" : "c758bc01-18ee-4d30-bc22-341300d14dff",
+		"type" : "Accounting",
+		"Created_at" : "2024-08-10 11:27:30.958",
+		"Updated_at" : "2024-08-10 11:27:30.958"
+	},
+	{
+		"id" : "c7cad024-027a-4523-a140-5c66eaa59e3e",
+		"type" : "Software Development",
+		"Created_at" : "2024-08-10 11:27:38.879",
+		"Updated_at" : "2024-08-10 11:27:38.879"
+	},
+	{
+		"id" : "c85da574-a668-4cdf-a6b9-fa4988f65f9f",
+		"type" : "Travel Agencies & Tour Operators",
+		"Created_at" : "2024-08-10 11:27:37.286",
+		"Updated_at" : "2024-08-10 11:27:37.286"
+	},
+	{
+		"id" : "c9983bf9-3fbd-4391-9980-dc2d198970fe",
+		"type" : "Gadget Stores",
+		"Created_at" : "2024-08-10 11:27:39.334",
+		"Updated_at" : "2024-08-10 11:27:39.334"
+	},
+	{
+		"id" : "c9ba99dd-b26d-49b5-96aa-e7f6765138b2",
+		"type" : "Art Galleries",
+		"Created_at" : "2024-08-10 11:27:31.618",
+		"Updated_at" : "2024-08-10 11:27:31.618"
+	},
+	{
+		"id" : "cc7fac8b-5f50-4449-aa57-5b4b1fc76375",
+		"type" : "Employment Agencies",
+		"Created_at" : "2024-08-10 11:27:33.390",
+		"Updated_at" : "2024-08-10 11:27:33.390"
+	},
+	{
+		"id" : "d11bd7ea-0327-49db-9b4d-199236a5ef7e",
+		"type" : "Cleaning Services",
+		"Created_at" : "2024-08-10 11:27:38.272",
+		"Updated_at" : "2024-08-10 11:27:38.272"
+	},
+	{
+		"id" : "d2a53c5b-b270-4375-8d67-6313d00cf742",
+		"type" : "Architects, Landscape Architects, Engineers & Surveyors",
+		"Created_at" : "2024-08-10 11:27:33.921",
+		"Updated_at" : "2024-08-10 11:27:33.921"
+	},
+	{
+		"id" : "d598e6e1-72de-4ea6-aeac-f8f8a94fc9b9",
+		"type" : "Building Materials & Supplies",
+		"Created_at" : "2024-08-10 11:27:33.997",
+		"Updated_at" : "2024-08-10 11:27:33.997"
+	},
+	{
+		"id" : "d6db07a8-e046-4c94-9828-e193cedde701",
+		"type" : "Computer or IT Institutes",
+		"Created_at" : "2024-08-10 11:27:33.010",
+		"Updated_at" : "2024-08-10 11:27:33.010"
+	},
+	{
+		"id" : "d94f501a-945c-4ab3-be14-ff8a024035b9",
+		"type" : "Fast Food & Street Food",
+		"Created_at" : "2024-08-10 11:27:34.920",
+		"Updated_at" : "2024-08-10 11:27:34.920"
+	},
+	{
+		"id" : "da792552-de31-4919-8be0-dfb7f06c5c4e",
+		"type" : "Pharmacies",
+		"Created_at" : "2024-08-10 11:27:36.675",
+		"Updated_at" : "2024-08-10 11:27:36.675"
+	},
+	{
+		"id" : "dbd843e9-c15a-4056-a4ce-5d5a076f0453",
+		"type" : "Manufacturing & Wholesale",
+		"Created_at" : "2024-08-10 11:27:37.969",
+		"Updated_at" : "2024-08-10 11:27:37.969"
+	},
+	{
+		"id" : "dc1fdf9f-e920-49d9-83cc-5d50a403f6e7",
+		"type" : "Real Estate",
+		"Created_at" : "2024-08-10 11:27:39.031",
+		"Updated_at" : "2024-08-10 11:27:39.031"
+	},
+	{
+		"id" : "df6c1dec-21b8-4dc2-bb6d-ebed231adc25",
+		"type" : "Farsan Stores",
+		"Created_at" : "2024-08-10 11:27:34.999",
+		"Updated_at" : "2024-08-10 11:27:34.999"
+	},
+	{
+		"id" : "e290e32a-513b-44b8-a35e-c5226c378001",
+		"type" : "Sporting Goods Stores",
+		"Created_at" : "2024-08-10 11:27:35.604",
+		"Updated_at" : "2024-08-10 11:27:35.604"
+	},
+	{
+		"id" : "e4055da7-bf52-419e-8315-8ccd2b7f7e2b",
+		"type" : "Driving Schools",
+		"Created_at" : "2024-08-10 11:27:38.424",
+		"Updated_at" : "2024-08-10 11:27:38.424"
+	},
+	{
+		"id" : "e4608d39-e95e-4cd8-ae17-e7e3358e3ab5",
+		"type" : "Car Repair Shops",
+		"Created_at" : "2024-08-10 11:27:32.097",
+		"Updated_at" : "2024-08-10 11:27:32.097"
+	},
+	{
+		"id" : "e6de52c1-2f36-4cde-aa27-4d8805e0dc4c",
+		"type" : "HVAC (Heating, Ventilation, Air Conditioning)",
+		"Created_at" : "2024-08-10 11:27:34.452",
+		"Updated_at" : "2024-08-10 11:27:34.452"
+	},
+	{
+		"id" : "e98586bb-f417-4171-a6e0-1558e7f3d2a1",
+		"type" : "Electronics Stores",
+		"Created_at" : "2024-08-10 11:27:39.258",
+		"Updated_at" : "2024-08-10 11:27:39.258"
+	},
+	{
+		"id" : "e9ef1e11-ba02-42b5-b7b7-2133fe4fa207",
+		"type" : "Physicians & Assistants",
+		"Created_at" : "2024-08-10 11:27:36.829",
+		"Updated_at" : "2024-08-10 11:27:36.829"
+	},
+	{
+		"id" : "f6f53430-a5a2-49ca-8aab-100a8a45c9d8",
+		"type" : "Public Relations",
+		"Created_at" : "2024-08-10 11:27:33.770",
+		"Updated_at" : "2024-08-10 11:27:33.770"
+	},
+	{
+		"id" : "f7920cb9-4d72-452f-b7be-3e3a00c24779",
+		"type" : "Veterinary Services",
+		"Created_at" : "2024-08-10 11:27:37.059",
+		"Updated_at" : "2024-08-10 11:27:37.059"
+	},
+	{
+		"id" : "f7fcd475-46b5-4b17-8ec9-92c083a1263e",
+		"type" : "Utility Companies",
+		"Created_at" : "2024-08-10 11:27:38.955",
+		"Updated_at" : "2024-08-10 11:27:38.955"
+	},
+	{
+		"id" : "fd822b13-0cf0-469d-98cc-99b87d8e3bb1",
+		"type" : "Spoken English or Maths Classes",
+		"Created_at" : "2024-08-10 11:27:33.239",
+		"Updated_at" : "2024-08-10 11:27:33.239"
+	},
+	{
+		"id" : "fe02b3ba-daaa-42f9-b884-48b10b8938e7",
+		"type" : "Landscape & Lawn Services",
+		"Created_at" : "2024-08-10 11:27:37.666",
+		"Updated_at" : "2024-08-10 11:27:37.666"
+	},
+	{
+		"id" : "fe33311a-a63b-49a0-9c04-57fb532b39d3",
+		"type" : "Mobile & Computer Stores",
+		"Created_at" : "2024-08-10 11:27:38.652",
+		"Updated_at" : "2024-08-10 11:27:38.652"
+	}
+]
